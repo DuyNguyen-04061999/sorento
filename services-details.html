@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Sunset Sorrento</title>
+    <link rel="icon" href="favicon.ico" />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+
+    <!-- meta facebook -->
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="dest/style.min.css" />
+    <link rel="stylesheet" href="dest/fonts.css" />
+  </head>
+
+  <!-- Mỗi body của mỗi page nên có class ví dụ homepage, aboutpage, contactpage... -->
+
+  <body class="aboutus">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container-fluid">
+        <a href="./" class="header__logo">
+          <img src="./img/logo.png" alt="" />
+        </a>
+
+        <ul class="header__nav">
+          <li><a class="" href="./index.html">TRANG CHỦ</a></li>
+          <li><a class="" href="./about.html">VỀ CHÚNG TÔI</a></li>
+          <li><a class="active" href="./services.html">DỊCH VỤ</a></li>
+          <li><a class="" href="./event.html">SỰ KIỆN</a></li>
+          <li><a class="" href="./menu.html">THỰC ĐƠN</a></li>
+          <li><a class="" href="./destination.html">ĐIỂM ĐẾN</a></li>
+          <li><a class="" href="./library.html">THƯ VIỆN</a></li>
+          <li><a class="" href="./contact.html">LIÊN HỆ</a></li>
+        </ul>
+
+        <div class="header__control">
+          <div class="header__control-lang">
+            <span class="text --main">EN</span>
+            <div class="down__wrap">
+              <div class="down"></div>
+            </div>
+            <ul class="sublist">
+              <li><a href="#" class="text --sub">GER</a></li>
+              <li><a href="#" class="text --sub">AUS</a></li>
+              <li><a href="#" class="text --sub">VIE</a></li>
+            </ul>
+          </div>
+          <a href="#" class="button">đặt bàn</a>
+          <div class="hamburger">
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+
+    <main class="mainwrapper --page-details">
+      <section
+        class="banner"
+        style="background-image: url(./img/service-details-banner.jpg)"
+      >
+        <div class="container">
+          <div class="wrap">
+            <div class="banner__menu-details">
+              <h3 class="title">Fresh Products</h3>
+              <div class="content">
+                <span class="bodytext">March 17, 2021</span>
+                <span class="bodytext --square">Recipes</span>
+                <span class="bodytext">By by Samanta Olson</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contentdetails">
+        <article class="container">
+          <h4 class="title">Gifts of the Sea</h4>
+          <p class="bodytext">
+            Tristique risus nec feugiat in fermentum posuere urna nec. Suscipit
+            tellus mauris a diam maecenas sed. Urna molestie at elementum eu
+            facilisis sed. Vulputate dignissim suspendisse in est ante in nibh
+            mauris. Praesent semper feugiat nibh sed pulvinar proin gravida
+            hendrerit lectus. Imperdiet proin fermentum leo vel orci porta non.
+            Sollicitudin aliquam ultrices sagittis orci a scelerisque purus
+            semper. Cras pulvinar mattis nunc sed blandit libero volutpat
+          </p>
+
+          <div class="contentdetails__img">
+            <div class="img">
+              <img src="./img/service-details-content.jpg" alt="" />
+            </div>
+          </div>
+
+          <h4 class="title">Gifts of the Sea</h4>
+          <p class="bodytext">
+            Consumer products marketing has experienced a profound change over
+            the last 5 to 10 years, from a world dominated by large global
+            brands and established TV and big-box retail models to a world
+            that’s quickly much more complex, with a proliferation of brands,
+            channels and marketing tools. Technology’s disrupted the industry in
+            three ways. Firstly, it’s disrupted the way consumers engage with
+            brands. In the UK and the US now, over 60% of consumers discover
+            brands.
+          </p>
+          <p class="bodytext">
+            Consumer products marketing has experienced a profound change over
+            the last 5 to 10 years, from a world dominated by large global
+            brands and established TV and big-box retail models to a world
+            that’s quickly much more complex, with a proliferation of brands,
+            channels and marketing tools.
+          </p>
+        </article>
+      </section>
+
+      <section class="reservedetails">
+        <div class="container">
+          <div class="reserve__content">
+            <div class="reserve__content-pattern">
+              <div class="img">
+                <img src="./img/home-reserve.png" alt="" />
+              </div>
+            </div>
+            <div class="reserve__content-register">
+              <h5 class="subtitle-yellow-reserve">Make a Reserve</h5>
+              <form action="post" autocomplete="off" class="form">
+                <input
+                  required
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  placeholder="Họ tên*"
+                />
+                <input
+                  required
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  placeholder="Điện thoại*"
+                />
+                <select required name="people" id="people">
+                  <option value="2">2 người</option>
+                  <option value="3">3 người</option>
+                  <option value="4">4 người</option>
+                  <option value="5">5 người</option>
+                  <option value="6">6 người</option>
+                  <option value="7">7 người</option>
+                </select>
+                <input required type="date" name="date" id="date" />
+                <select required name="time" id="time">
+                  <option value="19">19:00</option>
+                  <option value="20">20:00</option>
+                  <option value="21">21:00</option>
+                  <option value="22">22:00</option>
+                  <option value="23">23:00</option>
+                  <option value="24">24:00</option>
+                </select>
+
+                <button type="submit" class="button">đặt bàn</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tags">
+        <div class="container">
+          <div class="tags__top">
+            <div class="tags__top-name">
+              <h6 class="subtitle-white"><a href="#">cocktail</a></h6>
+              <h6 class="subtitle-white"><a href="#">coffee</a></h6>
+              <h6 class="subtitle-white"><a href="#">desserts</a></h6>
+            </div>
+            <a href="#" class="tags__top-share">
+              <img src="./img/sharelink-logo.svg" alt="" />
+            </a>
+          </div>
+          <div class="tags__bottom">
+            <div class="tags__bottom-item">
+              <div class="img">
+                <img src="./img/sharelink-img.jpg" alt="" />
+              </div>
+              <div class="info">
+                <h4 class="title-banner">Vegan Cuisine</h4>
+                <h5 class="subtitle-white-i">March 27, 2021</h5>
+              </div>
+            </div>
+            <div class="tags__bottom-item">
+              <div class="img">
+                <img src="./img/sharelink-img.jpg" alt="" />
+              </div>
+              <div class="info">
+                <h4 class="title-banner">Vegan Cuisine</h4>
+                <h5 class="subtitle-white-i">March 27, 2021</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="otherservices">
+        <div class="container">
+          <h4 class="title">Dịch vụ khác</h4>
+
+          <div class="otherservices__content">
+            <div class="otherservices__content-item">
+              <div class="top">
+                <a href="#">
+                  <div class="img">
+                    <img src="./img/service-details-other.jpg" alt="" />
+                  </div>
+                </a>
+              </div>
+              <h4 class="title"><a href="#">Vegan Cuisine</a></h4>
+            </div>
+            <div class="otherservices__content-item">
+              <div class="top">
+                <a href="#">
+                  <div class="img">
+                    <img src="./img/service-details-other.jpg" alt="" />
+                  </div>
+                </a>
+              </div>
+              <h4 class="title"><a href="#">Vegan Cuisine</a></h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="footer__top-info --sub">
+            <h4 class="title">Contacts</h4>
+            <div class="details">
+              <a
+                href="https://goo.gl/maps/KhGTwsVcKtfBD9qaA"
+                target="_blank"
+                class="row"
+              >
+                <span class="icon">
+                  <img src="./img/home-location.svg" alt="" />
+                </span>
+                <span class="bodytext"> 5 Rue Dalou, 75015 Paris </span>
+              </a>
+              <a href="tel:0767813755" class="row">
+                <span class="icon">
+                  <img src="./img/home-phone.svg" alt="" />
+                </span>
+                <span class="bodytext"> 0767813755 </span>
+              </a>
+              <a href="mailto:nguyenduy30234@gmail.com" class="row">
+                <span class="icon">
+                  <img src="./img/home-email.svg" alt="" />
+                </span>
+                <span class="bodytext"> nguyenduy30234@gmail.com </span>
+              </a>
+            </div>
+          </div>
+          <div class="footer__top-social">
+            <div class="logo">
+              <img src="./img/logo.png" alt="" />
+            </div>
+            <p class="bodytext-italic">
+              Whisper to us about your feelings, and we will prepare what you
+              need now.
+            </p>
+            <div class="icon__list">
+              <a href="#" target="_blank" class="icon__list-item">
+                <img src="./img/social-icon-1.svg" alt="" />
+              </a>
+              <a href="#" target="_blank" class="icon__list-item">
+                <img src="./img/social-icon-2.svg" alt="" />
+              </a>
+              <a href="#" target="_blank" class="icon__list-item">
+                <img src="./img/social-icon-3.svg" alt="" />
+              </a>
+              <a href="#" target="_blank" class="icon__list-item">
+                <img src="./img/social-icon-4.svg" alt="" />
+              </a>
+              <a href="#" target="_blank" class="icon__list-item">
+                <img src="./img/social-icon-5.svg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer__top-time --sub">
+            <h4 class="title">giờ mở cửa</h4>
+            <div class="details">
+              <div class="row">
+                <span class="bodytext --yellow">Thứ 2 – Thứ 6:</span>
+                <span class="bodytext">7:00 giờ – 18:00 giờ</span>
+              </div>
+              <div class="row">
+                <span class="bodytext --yellow">Thứ 7:</span>
+                <span class="bodytext">7:00 giờ – 18:00 giờ </span>
+              </div>
+              <div class="row">
+                <span class="bodytext --yellow">Chủ nhật:</span>
+                <span class="bodytext">8:00 giờ – 18:00 giờ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="container">
+          <p class="bodytext">
+            Copyright © 2022 Sunset Sorrento Restaurant. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="./js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script type="text/javascript" src="dest/main.js"></script>
+  </body>
+</html>

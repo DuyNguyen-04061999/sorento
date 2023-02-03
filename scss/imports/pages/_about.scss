@@ -1,0 +1,169 @@
+.--about {
+    background-color: $black-light-cl;
+    .restaurant {
+        padding: 230px 0 201px 0;
+        @include sm {
+            padding: 100px 0;
+        }
+        .container {
+            @include contentGrid(12);
+            @include md {
+                @include flexColVerCenter;
+                flex-direction: column-reverse;
+            }
+            grid-auto-rows: 620px;
+            gap: 24px;
+        }
+
+        &__img {
+            grid-area: 1/1 / span 1 / span 6;
+            @include imgFit;
+            @include md {
+                @include size(100%, 620px);
+            }
+            @include md {
+                margin-top: 40px;
+            }
+            @include xxs {
+                height: 500px;
+            }
+        }
+        &__content {
+            grid-area: 1 / 8 / 1 /-1;
+            position: relative;
+            .title {
+                font-size: 7.2rem;
+                line-height: 8rem;
+                margin-bottom: 48px;
+                margin: -13px 0 48px 0;
+                &.--info {
+                    font-size: 4rem;
+                    line-height: 5.9rem;
+                    margin: 0 0 9px 0;
+                }
+            }
+
+            &-info {
+                @include contentGrid(5);
+                @include xxs {
+                    @include flexColVerCenter;
+                }
+                gap: 24px;
+                margin-top: 40px;
+                .award {
+                    grid-area: 1/1 / span 1 / span 2;
+                    &__links {
+                        @include flexColVerCenter;
+                        margin-top: 9px;
+                        a {
+                            display: flex;
+                            flex-direction: column;
+                            width: max-content;
+                            @include transition(0.2s);
+                            &:hover {
+                                color: $main-cl;
+                                &::after {
+                                    background-color: $main-cl;
+                                }
+                            }
+                            &::after {
+                                content: "";
+                                @include size(100%, 1px);
+                                background-color: $white-cl;
+                                display: block;
+                                margin-top: -4px;
+                                @include transition(0.2s);
+                            }
+                        }
+                    }
+                }
+                .contact {
+                    grid-area: 1/3 / span 1/ -1;
+                    .bodytext {
+                        display: block;
+                        @include xxs {
+                            word-break: break-all;
+                        }
+                    }
+                    .icon__list {
+                        margin-top: 43px;
+                        @include xxs {
+                            gap: 0;
+                        }
+                    }
+                }
+            }
+
+            &-logo {
+                position: absolute;
+                @include size(120px);
+                @include imgFit;
+                right: 0;
+                top: 0;
+                @include transform(translateY(-50%));
+                @include animation(rotate100 infinite forwards 20s linear);
+            }
+        }
+    }
+
+    .panorama {
+        &__wrap {
+            width: 100%;
+            height: 0;
+            padding-top: 50%;
+            position: relative;
+            .pan {
+                @include absoluteCenter("XY", 100%);
+                canvas {
+                    display: block;
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+                span {
+                    a {
+                        @include text("mr", 1.4rem, 3rem, initial, $black-dark-cl, initial);
+                    }
+                }
+            }
+        }
+    }
+
+    .slogan {
+        padding: 212px 0 228px 0;
+        @include md {
+            padding: 120px 0;
+        }
+        .container {
+            display: flex;
+            @include md {
+                flex-wrap: wrap;
+            }
+        }
+
+        &__item {
+            display: flex;
+            @include md {
+                align-items: center;
+            }
+            @include xs {
+                flex-direction: column;
+            }
+            &-logo {
+                flex-shrink: 0;
+                @include size(124px);
+                @include mid("true");
+            }
+            &-desc {
+                @include xs {
+                    text-align: center;
+                }
+                .title {
+                    @include overtext(1);
+                }
+                .bodytext {
+                    @include overtext(2);
+                }
+            }
+        }
+    }
+}

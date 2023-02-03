@@ -1,0 +1,82 @@
+// css navigator (Menu)
+.header {
+    user-select: none;
+
+    &__nav {
+        @include mid;
+        @include flexVerCenter;
+        @include size(max-content, 100%);
+        li {
+            @include size(max-content, 100%);
+            @include flexVerCenter;
+            --height-nav: var(--height-header);
+            a {
+                display: inline-block;
+                height: 100%;
+                @include transition(all 0.2s linear);
+                @include text("or", 1.4rem, var(--height-nav), initial, $white-cl, uppercase);
+                &.active {
+                    color: $main-cl;
+                }
+                &:hover {
+                    color: $main-cl;
+                }
+            }
+            & + li {
+                margin-left: 24px;
+            }
+        }
+
+        &-mobile {
+            display: none;
+            @include maxW(1024px) {
+                display: block;
+            }
+            position: fixed;
+            z-index: 4;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 320px;
+            @include transition(0.25s);
+            @include transform(translateX(-100%));
+            &.active {
+                @include transform(translateX(0));
+            }
+            @include xs {
+                width: 250px;
+            }
+            background-color: $black-cl;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            .--close {
+                position: absolute;
+                top: 20px;
+                right: 10px;
+                @include size(30px);
+                cursor: pointer;
+                svg {
+                    display: inline-block;
+                    @include size(100%);
+                }
+            }
+            li {
+                &:nth-child(2) {
+                    margin-top: 40px;
+                }
+                border-bottom: 1px solid #4d4c4c;
+                a {
+                    display: block;
+                    @include text("or", 1.7rem, 3rem, initial, $white-cl, uppercase);
+                    padding: 15px 30px;
+                    @include transition(0.4s);
+                    &:hover {
+                        color: $main-cl;
+                    }
+                }
+            }
+        }
+        @include maxW(1024px) {
+            display: none;
+        }
+    }
+}

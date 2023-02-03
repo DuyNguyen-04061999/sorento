@@ -1,0 +1,107 @@
+// css footer
+.footer {
+    background-color: $black-dark-cl;
+    z-index: -1;
+    &__top {
+        .container {
+            padding-top: 104px;
+            padding-bottom: 95px;
+            position: relative;
+            @include flexBetweenCenter;
+            align-items: flex-start;
+            @include sm {
+                @include flexColVerCenter;
+            }
+            .details {
+                margin-top: 24px;
+                .row {
+                    @include flexVerCenter;
+                    .icon {
+                        @include size(40px);
+                        @include mid("true");
+                        margin-right: 24px;
+                    }
+                    .bodytext {
+                        @include overtext(1);
+                        @include transition(all 0.2s linear);
+                        &:hover {
+                            color: $main-cl;
+                        }
+                    }
+                    & + .row {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+        &-info {
+            &.--sub {
+                flex-basis: 25%;
+            }
+        }
+        &-social {
+            @include mid();
+            @include sm {
+                position: static;
+                @include transform(translate(0, 0));
+                width: 100%;
+            }
+            width: calc((1 / 3) * 100%);
+
+            @include sm {
+                margin-top: 40px;
+            }
+            @include flexColBothCenter;
+            @include sm {
+                align-items: flex-start;
+            }
+            .bodytext-italic {
+                text-align: center;
+                @include sm {
+                    text-align: left;
+                }
+                margin-top: 22px;
+            }
+            .icon {
+                &__list {
+                    margin-top: 30px;
+                }
+            }
+        }
+        &-time {
+            @include sm {
+                margin-top: 40px;
+            }
+            .title {
+                text-align: right;
+                @include sm {
+                    text-align: left;
+                }
+            }
+            .details {
+                .row {
+                    justify-content: flex-end;
+                    @include sm {
+                        justify-content: flex-start;
+                    }
+                    .bodytext {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        background-color: $black-light-cl;
+        @include size(100%, auto);
+        padding: 25px 0;
+        .container {
+            @include size(100%);
+            @include mid("true");
+            .bodytext {
+                text-align: center;
+            }
+        }
+    }
+}

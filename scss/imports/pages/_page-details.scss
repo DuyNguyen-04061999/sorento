@@ -1,0 +1,40 @@
+.--page-details {
+    background: $black-light-cl;
+    .container {
+        max-width: 792px;
+        width: 100%;
+    }
+    .banner {
+        .container {
+            width: 100%;
+            max-width: $container-width;
+        }
+    }
+    // ========
+    .contentdetails {
+        padding: 120px 0 125px;
+        &__img {
+            @include size(100%, 0);
+            padding-top: 63.133%;
+            position: relative;
+            .img {
+                @include absoluteCenter("XY", 100%);
+                @include imgFit;
+            }
+
+            margin: 48px 0 84px;
+        }
+
+        p {
+            & + p {
+                margin-top: 30px;
+            }
+        }
+
+        h4 {
+            & + p {
+                margin-top: 22px;
+            }
+        }
+    }
+}

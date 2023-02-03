@@ -1,0 +1,301 @@
+.--service {
+    background-color: $black-light-cl;
+    .ourservice {
+        padding: 120px 0 70px;
+        user-select: none;
+        .container {
+            .textbox {
+                margin-bottom: 80px;
+            }
+        }
+
+        &__slides {
+            height: 450px;
+            .swiper-wrapper {
+                .slide {
+                    position: relative;
+                    @include size(auto, 100%);
+                    @include md {
+                        height: 400px;
+                    }
+                    .img {
+                        @include size(100%);
+                        @include imgFit();
+                    }
+                    .title {
+                        @include absoluteCenter("XY");
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        &-pagination {
+            position: relative;
+            &::before {
+                content: "";
+                @include absoluteCenter("XY", 310px, 2px);
+                @include maxW(320px) {
+                    width: 250px;
+                }
+                background-color: $main-cl;
+            }
+            @include mid("true");
+
+            margin-top: 53px;
+            .swiper-pagination-bullet {
+                background-color: $main-cl;
+                @include br(0px);
+                @include size(62px, 4px);
+                @include transition(0.2s);
+            }
+        }
+    }
+
+    .benefits {
+        .container {
+            @include contentGrid(12);
+            column-gap: 24px;
+            grid-auto-rows: 600px;
+            @include md {
+                @include flexColVerCenter;
+            }
+        }
+        &__content {
+            grid-area: 1/1 / span 1 / span 5;
+
+            &-desc {
+                margin-top: 88px;
+                @include md {
+                    margin-top: 60px;
+                }
+                .row {
+                    @include flexBetweenCenter;
+                    .icon {
+                        flex-shrink: 0;
+                        margin-right: 24px;
+                    }
+                    .bodytext {
+                        @include overtext(3);
+                    }
+                    & + .row {
+                        margin-top: 48px;
+                    }
+                }
+            }
+        }
+        &__illus {
+            grid-area: 1/7 / span 1/ -1;
+            position: relative;
+            @include md {
+                margin-top: 40px;
+                @include size(100%, 600px);
+            }
+            &::before {
+                content: "";
+                @include absoluteCenter("XY", 100%);
+                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+            }
+
+            &-img {
+                @include size(100%);
+                @include imgFit;
+                img {
+                    @include md {
+                        object-position: center;
+                    }
+                    @include sm {
+                        object-position: bottom;
+                    }
+                }
+            }
+            &-content {
+                @include absoluteCenter("XY", 100%);
+                @include flexColBothCenter;
+                text-align: center;
+                .heading {
+                    h2 {
+                        margin-bottom: 15px;
+                    }
+                }
+                .button {
+                    @include button(1, 56px, false);
+                    background-color: $white-cl;
+                    color: $black-dark-cl;
+                    margin-top: 67px;
+                }
+            }
+            &-decor {
+                position: absolute;
+                right: -103px;
+                bottom: -48px;
+                @include size(298px, 292px);
+                @include imgFit;
+                @include maxW(1024px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .calculatenum {
+        padding: 214px 0 113px;
+        @include sm {
+            padding: 125px 0;
+        }
+        .container {
+            @include contentGrid(4);
+            @include xs {
+                @include contentGrid(2);
+            }
+            @include xxs {
+                @include contentGrid(1);
+            }
+            gap: 24px;
+            .current-num {
+                align-items: center;
+                text-align: center;
+                span {
+                    font-size: 6rem;
+                    line-height: 8.9rem;
+                    margin-bottom: 7px;
+                }
+            }
+        }
+    }
+
+    .prize {
+        background: $black-pattern-reserve;
+        margin-bottom: -$gap-service-page;
+        padding-bottom: 127px;
+        &__heading {
+            position: relative;
+            h4.title {
+                font-size: 24rem;
+                line-height: 35.6rem;
+                color: $black-light-cl;
+                text-align: center;
+                @include xxs {
+                    font-size: 20rem;
+                }
+                @include maxW(450px) {
+                    font-size: 15rem;
+                }
+                @include maxW(375px) {
+                    font-size: 10rem;
+                }
+            }
+            .textbox {
+                @include absoluteCenter("XY", 100%, auto);
+            }
+        }
+
+        &__details {
+            @include flexVerCenter;
+            @include md {
+                flex-wrap: wrap;
+                align-items: stretch;
+                justify-content: center;
+            }
+
+            --gap: 24px;
+            gap: var(--gap);
+            @include xs {
+                --gap: 48px;
+            }
+            &-col {
+                width: calc((100% - var(--gap) * 2) / 3);
+                @include md {
+                    width: calc((100% - var(--gap)) / 2);
+                    @include flexColVerCenter;
+                }
+                @include xs {
+                    width: 100%;
+                }
+                border: 1px solid $main-cl;
+                background-color: $black-light-cl;
+                .heading {
+                    text-align: center;
+                    padding: 40px 0;
+                    @include flexColBothCenter;
+                    .price {
+                        font-size: 6rem;
+                        line-height: 8.9rem;
+                    }
+                    span.bodytext {
+                        color: $main-cl;
+                        text-transform: uppercase;
+                    }
+                }
+                .content {
+                    @include flexColBothCenter;
+                    text-align: center;
+                    .pattern-square {
+                        width: 100%;
+                        margin-bottom: 40px;
+                    }
+                    .title {
+                        text-transform: initial;
+                        @include overtext(1);
+                        & + .title {
+                            margin-top: 16px;
+                        }
+                    }
+                }
+                .button {
+                    @include button(2, 56px, false);
+                    margin: 40px auto;
+                }
+                &.--second {
+                    position: relative;
+                    background: left / contain no-repeat;
+                    background-color: $black-cl;
+                    .logo {
+                        @include size(100px);
+                        @include mid("true");
+                        position: absolute;
+                        top: 0;
+                        right: -20px;
+                        @include transform(translateY(-50%));
+                        @include animation(rotate100 15s linear infinite);
+                    }
+                }
+            }
+        }
+    }
+
+    // =========
+    .philosophy {
+        padding-top: $gap-service-page;
+        padding-bottom: 120px;
+        background-color: $black-light-cl;
+        .container-fluid {
+            @include flexBetweenCenter;
+            align-items: initial;
+        }
+
+        &__img {
+            @include size(calc((384 / 1410) * 100%), 600px);
+            @include imgFit;
+            flex-shrink: 0;
+            @include sm {
+                display: none;
+            }
+        }
+        &__content {
+            flex: 1;
+            margin: 0 33px;
+            text-align: center;
+            .textbox {
+                margin-bottom: 24px;
+            }
+            .bodytext {
+                margin-bottom: 24px;
+                @include overtext(5);
+                &-italic {
+                    margin-bottom: 54px;
+                    @include overtext(2);
+                }
+            }
+        }
+    }
+}

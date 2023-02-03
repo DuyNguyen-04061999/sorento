@@ -1,0 +1,60 @@
+.--contact {
+    background-color: $black-light-cl;
+
+    .facts {
+        margin: 110px 0 114px;
+        &__content {
+            &-details {
+                .row {
+                    @include flexVerCenter;
+                    &:hover {
+                        .desc {
+                            .bodytext {
+                                color: $main-cl;
+                            }
+                        }
+                    }
+                    .icon {
+                        @include size(60px);
+                        @include mid("true");
+                        flex-shrink: 0;
+                        background-color: $black-dark-cl;
+                        @include br(50%);
+                    }
+                    .desc {
+                        margin-left: 24px;
+                        .bodytext {
+                            @include transition(0.2s);
+                            word-break: break-all;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            .icon__list {
+                @include flexVerCenter;
+                margin-top: 19px;
+                &-item {
+                    &:hover {
+                        background-color: $main-cl;
+                        img {
+                            filter: initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .map {
+        &__content {
+            @include size(100%, 468px);
+            @include xxs {
+                height: 400px;
+            }
+            iframe {
+                @include size(100%);
+            }
+        }
+    }
+}

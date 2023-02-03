@@ -1,0 +1,60 @@
+.--library {
+    background-color: $black-light-cl;
+    .content {
+        margin: 109px 0 124px;
+        &__nav {
+            &-list {
+                user-select: none;
+                @include mid("true");
+                @include size(max-content);
+                position: relative;
+                flex-wrap: wrap;
+                margin: 0 auto 48px;
+                .subtitle-white {
+                    cursor: pointer;
+                    @include transition(0.2s);
+                    text-transform: uppercase;
+                    font-family: "ol";
+                    color: #909090;
+                    &:hover {
+                        color: $white-cl;
+                    }
+                    &.active {
+                        color: $white-cl;
+                    }
+                    + .subtitle-white {
+                        margin-left: 24px;
+                    }
+                }
+                &::after {
+                    content: "";
+                    background-color: $main-cl;
+                    @include size(100%, 1px);
+                    margin-top: 13px;
+                    transform: translateY(50%);
+                }
+            }
+        }
+
+        &__grid {
+            @include contentGrid(3);
+            @include sm {
+                @include contentGrid(2);
+            }
+            @include xxs {
+                @include contentGrid(1);
+            }
+            gap: 24px;
+            margin-bottom: 74px;
+            &-item {
+                position: relative;
+                @include size(100%, 0);
+                padding-top: 117.19%;
+                .img {
+                    @include absoluteCenter("XY", 100%);
+                    @include imgFit;
+                }
+            }
+        }
+    }
+}

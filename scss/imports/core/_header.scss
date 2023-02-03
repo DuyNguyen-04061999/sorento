@@ -1,0 +1,86 @@
+// css header
+.header {
+    @include size(100%, var(--height-header));
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: $black-light-cl;
+    z-index: 1;
+    .container {
+        &-fluid {
+            @include flexBetweenCenter;
+            @include size(100%);
+
+            .button {
+                @include button(2, 52px, "false");
+                @include md {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__control {
+        @include flexVerCenter;
+        &-lang {
+            @include size(50px, var(--height-button));
+
+            cursor: pointer;
+            @include flexVerCenter;
+            justify-content: flex-end;
+            position: relative;
+            .text {
+                &.--main {
+                    margin-right: 3px;
+                }
+                @include text("or", 1.4rem, 2rem, initial, $white-cl, uppercase);
+            }
+            .down {
+                @include triangle(5px, 5px, 0, 30%, 90deg);
+                &__wrap {
+                    @include transition(all 0.2s linear);
+                }
+            }
+            &.active {
+                .sublist {
+                    @include visible(1);
+                    transform: translateY(0);
+                }
+                .down__wrap {
+                    transform: rotateX(180deg);
+                }
+            }
+            .sublist {
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                transform: translateY(10px);
+                right: 0;
+                @include visible(0);
+                @include transition(all 0.2s ease-in-out);
+                background: $button-cl;
+                border: 1px solid rgba(120, 120, 120, 0.443);
+                li {
+                    border: 1px solid transparent;
+
+                    .--sub {
+                        display: inline-block;
+                        width: 100%;
+                        text-align: center;
+                        @include transition(all 0.2s linear);
+                        &:hover {
+                            color: $main-cl;
+                        }
+                    }
+                    & + li {
+                        border-color: #eee transparent transparent transparent;
+                    }
+                }
+            }
+        }
+        .button {
+            margin-left: 40px !important;
+        }
+    }
+}

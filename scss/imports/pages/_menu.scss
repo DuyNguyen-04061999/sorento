@@ -1,0 +1,41 @@
+.--menu {
+    background-color: $black-light-cl;
+    .content {
+        margin-top: 120px;
+        padding: 0 24px;
+        margin-bottom: 124px;
+        &__list {
+            @include contentGrid(2);
+            @include sm {
+                @include contentGrid(1);
+            }
+            margin-bottom: 84px;
+            gap: 52px;
+            &-item {
+                position: relative;
+                @include size(100%, 0);
+                padding-top: 101.046%;
+                @include sm {
+                    padding-top: 87%;
+                }
+                .img {
+                    @include absoluteCenter("XY", 100%);
+                    @include imgFit;
+                }
+                .info {
+                    @include absoluteCenter("XY", max-content);
+                    @include flexColBothCenter;
+                    .title {
+                        @include xxs {
+                            font-size: 3.6rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .button {
+            text-transform: capitalize;
+        }
+    }
+}
