@@ -6,7 +6,7 @@
     left: 0;
     right: 0;
     background: $black-light-cl;
-    z-index: 1;
+    z-index: 10;
     .container {
         &-fluid {
             @include flexBetweenCenter;

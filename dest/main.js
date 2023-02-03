@@ -57,7 +57,7 @@ window.addEventListener("load", function () {
     <li><a href="./library.html">THƯ VIỆN</a></li>
     <li><a href="./contact.html">LIÊN HỆ</a></li>
 </ul>`;
-  const overlayHTML = `<div class="overlay"></div>`;
+  const overlayHTML = `<div class="overlay-nav"></div>`;
   document.body.insertAdjacentHTML("beforeend", mobileHTML);
   document.body.insertAdjacentHTML("beforeend", overlayHTML);
 
@@ -65,22 +65,23 @@ window.addEventListener("load", function () {
 
   const navMobile = $(".header__nav-mobile");
   const closeMobile = navMobile.querySelector(".--close");
-  const overlay = $(".overlay");
+  const overlayNav = document.body.querySelector(".overlay-nav");
+
   function onClickHamburger() {
-    if (!hamburger && !closeMobile && !navMobile) return;
+    if (!hamburger && !closeMobile && !navMobile && !overlayNav) return;
     hamburger.addEventListener("click", function () {
       this.classList.toggle("active");
       navMobile.classList.toggle("active");
-      overlay.classList.add("active");
+      overlayNav.classList.add("active");
     });
 
     function removeActive() {
       hamburger.classList.remove("active");
       navMobile.classList.remove("active");
-      overlay.classList.remove("active");
+      overlayNav.classList.remove("active");
     }
     closeMobile.addEventListener("click", removeActive);
-    overlay.addEventListener("click", removeActive);
+    overlayNav.addEventListener("click", removeActive);
   }
   onClickHamburger();
   // =========slider-hero==============
