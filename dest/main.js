@@ -83,7 +83,8 @@ window.addEventListener("load", function () {
     closeMobile.addEventListener("click", removeActive);
     overlayNav.addEventListener("click", removeActive);
   }
-  onClickHamburger();
+  onClickHamburger(); 
+  
   // =========slider-hero==============
   const bannerSlides = $(".banner__slides");
 
